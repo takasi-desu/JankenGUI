@@ -14,3 +14,12 @@ Name: "{group}\ReadMe.txt"; Filename: "{app}\ReadMe.txt";
 Name: "{group}\License.txt"; Filename: "{app}\License.txt";
 Name: "{commondesktop}\たかしのジャンケン"; Filename: "{app}\JankenGUI.exe";
 Name: "{group}\アンインストール"; Filename: "{uninstallexe}";
+
+[Files]
+Source: "bin\Release\JankenGUI.exe"; DestDir: "{app}";
+Source: "ReadMe.txt"; DestDir: "{app}";
+Source: "License.txt"; DestDir: "{app}";
+
+[Registry]
+Root: HKCU; Subkey: "Software\Takashi"; Flags: uninsdeletekeyifempty
+Root: HKCU; Subkey: "Software\Takashi\JankenGUI"; Flags: uninsdeletekey
